@@ -1,11 +1,11 @@
 class DropdownMenu {
-    constructor() {
+    constructor(toggleButtonSelector, contentDivSelector) {
         this.itemsVisible = true;
-        this.toggleButton = document.querySelector('#websites-btn');
+        this.toggleButton = document.querySelector(toggleButtonSelector);
         this.toggleButton.addEventListener('click', () => {
             this.toggleItemsVisibility();
         });
-        this.websitesSection = document.querySelector('#websites');
+        this.websitesSection = document.querySelector(contentDivSelector);
 
         this.toggleItemsVisibility();
     }
